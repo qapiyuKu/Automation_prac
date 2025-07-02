@@ -16,7 +16,7 @@ public class BaseLib {
      static String  URL;
 
 @BeforeTest
-    public void setup() throws IOException
+    public static WebDriver launch_driver() throws IOException
     {
     BrowserName=ReadPropertyFile.getPropertyvalue("browser");
     URL=ReadPropertyFile.getPropertyvalue("url");
@@ -34,16 +34,19 @@ public class BaseLib {
         driver.manage().window().maximize();
         driver.get(URL);
     }
-}
-@AfterTest
-public void teardown()
-{
-    driver.close();
-}
-    public static void main(String[] args) throws IOException {
-        BaseLib b=new BaseLib();
-        b.setup();
 
+        return driver;
     }
+
+@AfterTest
+public void close_browser()
+{
+    //driver.close();
+}
+//    public static void main(String[] args) throws IOException {
+//        BaseLib b=new BaseLib();
+//        b.setup();
+//
+//    }
 
 }
