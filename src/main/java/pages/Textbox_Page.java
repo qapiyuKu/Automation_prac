@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilites.Excelutilty;
+
+import java.io.IOException;
 
 public class Textbox_Page extends BaseLib
 {
@@ -41,28 +44,24 @@ public class Textbox_Page extends BaseLib
 {
     TextBoxButton.click();
 }
-    public void enter_FullName()
-{
-    FUllName.sendKeys("Piyush");
+    public void enter_FullName() throws IOException {
+    FUllName.sendKeys(Excelutilty.ExcelvalueAccoringPassAurmnt("Testvalue",1,1));
 }
 
-    public void enter_Emaild()
-{
-    EmailId.sendKeys("Piytush@gmail.com");
+    public void enter_Emaild() throws IOException {
+    EmailId.sendKeys(Excelutilty.ExcelvalueAccoringPassAurmnt("Testvalue",2,1));
 }
 
-    public void enter_CurrentAddress()
-{
-    CurrentAddress.sendKeys("NOIDA");
+    public void enter_CurrentAddress() throws IOException {
+    CurrentAddress.sendKeys(Excelutilty.ExcelvalueAccoringPassAurmnt("Testvalue",3,1));
 }
 
-    public void enter_PermanentAddress()
-{
-    PeemanentAddress.sendKeys("Bihar");
+    public void enter_PermanentAddress() throws IOException {
+    PeemanentAddress.sendKeys(Excelutilty.ExcelvalueAccoringPassAurmnt("Testvalue",4,1));
 }
     public void click_SubmitButton()
 {
-    SubmitButton.click();
+    SubmitButton.submit();
 }
 
 
