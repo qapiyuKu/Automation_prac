@@ -1,14 +1,15 @@
 package utilites;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 public class tttttt {
 
-    public static int addition(int a,int b)
-    {
-        int sum=a+b;
-      return sum;
-    }
-
     public static void main(String[] args) {
-        addition(2,3);
+        WebDriver driver=new ChromeDriver();
+        driver.get("https://demoqa.com/");
+        JavascriptExecutor js=(JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
     }
 }

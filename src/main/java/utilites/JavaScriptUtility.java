@@ -21,4 +21,9 @@ public class JavaScriptUtility {
      JavascriptExecutor js=(JavascriptExecutor) driver;
      js.executeScript("arguments[0].value=value",element);
     }
+    public static void scrolToptoBottom(WebDriver driver)
+    {
+     JavascriptExecutor js=(JavascriptExecutor) driver;
+     js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+    }
 }
