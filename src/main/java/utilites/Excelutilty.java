@@ -38,10 +38,10 @@ public static String ExcelvalueAccoringPassAurmnt(String sheetname,int row,int c
         XSSFWorkbook wb = new XSSFWorkbook(fis);
         XSSFSheet ws = wb.getSheet(sheetname);
         XSSFRow ROWValue = ws.getRow(row);
-       Cellvalue = ROWValue.getCell(column).toString();
-    System.out.println(Cellvalue);
-       wb.close();
-       return Cellvalue;
+        Cellvalue = ROWValue.getCell(column).toString();
+        System.out.println(Cellvalue);
+        wb.close();
+        return Cellvalue;
     }
     public static void main(String[] args) throws IOException {
        // Excelutilty.ExcelutiltyValue();
