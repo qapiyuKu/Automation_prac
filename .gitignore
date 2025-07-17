@@ -30,10 +30,11 @@ target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
-/password.txt
+/secure/password.txt
 ### VS Code ###
 .vscode/
+/secure
 
 ### Mac OS ###
 .DS_Store
-/password.txt
+/secure/password.txt
