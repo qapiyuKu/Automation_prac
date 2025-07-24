@@ -15,6 +15,7 @@ public class Extent_Logger {
     {
         Extent_Manager.get_thread_ex_test().fail(MarkupHelper.createLabel(m, ExtentColor.RED));
     }
+
     public static void on_info(String m)
     {
       Extent_Manager.get_thread_ex_test().info(MarkupHelper.createLabel(m,ExtentColor.YELLOW));

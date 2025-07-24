@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="DemologinTest">
+    <listeners>
+<listener class-name="reportExtent.Test_Listner_for_Ectent_Report_testng">
+
+</listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="RadioButton_Test">
         <classes>
-            <class name="Textbox_Test"/>
+            <class name="RadioButton_Test"/>
         </classes>
     </test>
 </suite>

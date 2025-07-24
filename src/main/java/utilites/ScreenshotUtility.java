@@ -16,7 +16,7 @@ import java.util.Base64;
 
 public class ScreenshotUtility
 {
-    public static File screenshotFile(WebDriver driver, String Filename) throws IOException {
+    public static File screenshotFile(WebDriver driver, String Filename)  {
         try
         {
             String timestamp = java.time.LocalDateTime.now().toString().replace(":", "-");

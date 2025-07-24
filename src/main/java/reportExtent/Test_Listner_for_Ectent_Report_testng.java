@@ -16,29 +16,28 @@ public class Test_Listner_for_Ectent_Report_testng implements ISuiteListener, IT
     }
 
     public void onTestStart(ITestResult result) {
-        Extent_Reporter.add_Report(result.getName().toString());
+        Extent_Reporter.add_Report(result.getMethod().getMethodName().toString());
     }
 
     public void onTestSuccess(ITestResult result) {
-        Extent_Logger.on_pass(result.getName().toString());
+        Extent_Logger.on_pass(result.getMethod().getMethodName().toString());
     }
 
     public void onTestFailure(ITestResult result) {
-        Extent_Logger.on_fail(result.getName().toString());
+        Extent_Logger.on_fail(result.getMethod().getMethodName().toString());
     }
 
+
     public void onTestSkipped(ITestResult result) {
-        Extent_Logger.on_info(result.getName().toString());
+        Extent_Logger.on_info(result.getMethod().getMethodName().toString());
     }
 
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-        Extent_Logger.on_info(result.getName().toString());
+        Extent_Logger.on_info(result.getMethod().getMethodName().toString());
     }
 
-
-
     public void onTestFailedWithTimeout(ITestResult result) {
-        Extent_Logger.on_info(result.getName().toString());
+        Extent_Logger.on_info(result.getMethod().getMethodName().toString());
     }
 
 }

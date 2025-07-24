@@ -43,8 +43,7 @@ public class CjaeckBox_Page extends BaseLib {
         HomeButton.click();
         JavaScriptUtility.scrollUptoElement(DesktopButton,driver);
         WaitUtility.elementToBeClickable(driver,10,DesktopButton);
-
-    }
+          }
     public void clickOnDesktop()
     {
         DesktopButton.click();
